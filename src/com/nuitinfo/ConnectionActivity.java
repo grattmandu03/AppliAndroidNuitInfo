@@ -22,7 +22,11 @@ public class ConnectionActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				Toast.makeText(ConnectionActivity.this, "Not yet implemented", 3000).show();
+				//Toast.makeText(ConnectionActivity.this, "Not yet implemented", 3000).show();
+				Intent intent = new Intent(ConnectionActivity.this,
+						HomeActivity.class);
+				startActivity(intent);
+				finish();
 			}
 		});
         

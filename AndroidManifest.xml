@@ -24,6 +24,9 @@
         </activity>
         <activity 
             android:name=".FriendActivity"></activity>
+        <activity
+            android:name=".HomeActivity">
+        </activity>
     </application>
 
 </manifest>
