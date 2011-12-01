@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+	<string name="add_friend">Ajouter un ami</string>
     <string name="app_name">Nuit De L\'info</string>
     <string name="connection">Connexion</string>
     <string name="connection_automatic">Connexion automatique</string>
