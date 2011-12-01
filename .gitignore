@@ -1,0 +1,7 @@
+#Files#
+#######
+bin
+gen
+.project
+project.properties
+proguard.cfg
