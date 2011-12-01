@@ -11,23 +11,27 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.Toast;
 
 public class FriendActivity extends Activity{
 	
-	private final ArrayList<User> deliveryList = new ArrayList<User>();
+	private final ArrayList<User> peopleList = new ArrayList<User>();
+	private final ArrayList<String> peopleListDisplay = new ArrayList<String>();
 	
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.friend_activity);
         
-        Button add_friend_button = (Button) findViewById(R.id.add_friend_button);
+        Button add_people_button = (Button) findViewById(R.id.add_friend_button);
+        ListView listView_people = (ListView) findViewById(R.id.listView_people);
         
         this.createFriendList();
         
-        add_friend_button.setOnClickListener(new OnClickListener() {
+        add_people_button.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -36,6 +40,8 @@ public class FriendActivity extends Activity{
 //				finish();
 			}
 		});
+        
+        listView_people.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, peopleListDisplay));
     }
 	
 	/*
@@ -43,7 +49,8 @@ public class FriendActivity extends Activity{
 	 * que sera parser le resultat de la DataMatrix
 	 */
 	private void createFriendList() {
-		deliveryList.clear();
+		peopleList.clear();
+		peopleListDisplay.clear();
 		
 		SimpleDateFormat format = new SimpleDateFormat("yyyy/MM/dd");
 	    long date_value = 0;
@@ -54,7 +61,8 @@ public class FriendActivity extends Activity{
 		}
 		
 		User user1 = new User(0,"monadresse@gmail.com","mdp","FIFRE","Sebastien",new Date(date_value));
-		deliveryList.add(user1);
+		peopleList.add(user1);
+		peopleListDisplay.add(user1.getLastname() + " " + user1.getFirstname());
 		
 	}
 

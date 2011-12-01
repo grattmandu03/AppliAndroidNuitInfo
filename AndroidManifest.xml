@@ -22,6 +22,8 @@
         <activity
             android:name=".RegistrationActivity">
         </activity>
+        <activity 
+            android:name=".FriendActivity"></activity>
     </application>
 
 </manifest>

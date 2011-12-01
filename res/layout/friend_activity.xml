@@ -6,12 +6,11 @@
     <Button android:id="@+id/add_friend_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5sp"
         android:text="@string/add_friend"
         android:textSize="18sp"/>
-    <ListView android:layout_width="match_parent"
+    <ListView android:id="@+id/listView_people"
+        android:layout_width="match_parent"
         android:layout_height="match_parent">        
     </ListView>
-
-    
-
 </LinearLayout>
