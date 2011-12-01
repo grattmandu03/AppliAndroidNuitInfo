@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="add_friend">Add Friend</string>
     <string name="app_name">Application Name</string>
     <string name="connection">Connection</string>
     <string name="connection_automatic">Connection automatic</string>

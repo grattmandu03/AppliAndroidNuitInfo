@@ -1,7 +1,7 @@
 #Files#
 #######
-bin
-gen
+bin/
+gen/
 .project
 project.properties
 proguard.cfg
