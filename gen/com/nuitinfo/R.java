@@ -21,12 +21,10 @@ public final class R {
         public static final int button_profil_small_pressed=0x7f020004;
         public static final int contact=0x7f020005;
         public static final int event=0x7f020006;
-        public static final int friend=0x7f020007;
-        public static final int ic_launcher=0x7f020008;
-        public static final int param=0x7f020009;
-        public static final int picto_guests=0x7f02000a;
-        public static final int preferences=0x7f02000b;
-        public static final int profil=0x7f02000c;
+        public static final int ic_launcher=0x7f020007;
+        public static final int picto_guests=0x7f020008;
+        public static final int preferences=0x7f020009;
+        public static final int profil=0x7f02000a;
     }
     public static final class id {
         public static final int EditText_email_participant=0x7f060006;
@@ -44,14 +42,14 @@ public final class R {
         public static final int editText_confirmpassword=0x7f060027;
         public static final int editText_email=0x7f060028;
         public static final int editText_password=0x7f060026;
-        public static final int event_button=0x7f060020;
+        public static final int event_button=0x7f060022;
         public static final int event_list_item_date=0x7f060010;
         public static final int event_list_item_layout=0x7f06000e;
         public static final int event_list_item_nb_user=0x7f060011;
         public static final int event_list_item_title=0x7f06000f;
         public static final int event_list_no_event=0x7f06000d;
         public static final int event_list_separator=0x7f060012;
-        public static final int friend_button=0x7f060021;
+        public static final int friend_button=0x7f060023;
         public static final int gift_list_item_layout=0x7f06001a;
         public static final int gift_list_item_price=0x7f06001c;
         public static final int gift_list_item_title=0x7f06001b;
@@ -62,9 +60,9 @@ public final class R {
         public static final int listView_events=0x7f06000c;
         public static final int listView_gifts=0x7f060014;
         public static final int listView_people=0x7f060019;
-        public static final int param_button=0x7f060022;
+        public static final int param_button=0x7f060021;
         public static final int participants_listView=0x7f060009;
-        public static final int profil_button=0x7f060023;
+        public static final int profil_button=0x7f060020;
         public static final int registration_button=0x7f060004;
         public static final int sign_up_button=0x7f06002a;
         public static final int tab_contacts=0x7f060015;

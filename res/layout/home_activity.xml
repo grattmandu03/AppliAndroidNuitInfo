@@ -11,24 +11,24 @@
 			android:layout_width="wrap_content" android:layout_height="wrap_content"
 			android:layout_below="@+id/layout_bot">
 			<Button android:layout_width="wrap_content"
-				android:layout_height="wrap_content" android:id="@+id/event_button"
-				android:background="@drawable/event" android:layout_margin="2sp">
+				android:layout_height="wrap_content" android:id="@+id/profil_button"
+				android:background="@drawable/profil" android:layout_margin="2sp">
 			</Button>
 			<Button android:layout_width="wrap_content"
-				android:layout_height="wrap_content" android:id="@+id/friend_button"
-				android:background="@drawable/contact" android:layout_margin="2sp">
+				android:layout_height="wrap_content" android:id="@+id/param_button"
+				android:background="@drawable/preferences" android:layout_margin="2sp">
 			</Button>
 		</LinearLayout>
 
 		<LinearLayout android:id="@+id/layout_bot"
 			android:layout_width="wrap_content" android:layout_height="wrap_content">
 			<Button android:layout_width="wrap_content"
-				android:layout_height="wrap_content" android:id="@+id/param_button"
-				android:background="@drawable/preferences" android:layout_margin="2sp">
+				android:layout_height="wrap_content" android:id="@+id/event_button"
+				android:background="@drawable/event" android:layout_margin="2sp">
 			</Button>
 			<Button android:layout_width="wrap_content"
-				android:layout_height="wrap_content" android:id="@+id/profil_button"
-				android:background="@drawable/profil" android:layout_margin="2sp">
+				android:layout_height="wrap_content" android:id="@+id/friend_button"
+				android:background="@drawable/contact" android:layout_margin="2sp">
 			</Button>
 		</LinearLayout>
 

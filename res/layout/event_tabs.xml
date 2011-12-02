@@ -52,11 +52,27 @@
 			<LinearLayout android:orientation="vertical"
 				android:layout_width="fill_parent"
 				android:layout_height="fill_parent"
-				android:id="@+id/tab_options">
+				android:id="@+id/tab_options"
+				android:background="#FFFFFF">
 				<TextView android:layout_width="wrap_content"
 				    android:layout_height="wrap_content"
-				    android:textColor="#FFFFFF"
-				    android:text="COUCOU"/>
+				    android:textColor="#000000"
+				    android:text="BudgetTotal : 15€"
+				    android:layout_marginBottom="10sp"/>
+				<TextView android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:text="Mon budget : 5€"
+				    android:layout_marginBottom="10sp"/>
+				<EditText android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:hint="Modifier mon budget"
+				    android:layout_marginRight="20sp"
+				    android:layout_marginLeft="20sp"
+				    android:layout_marginBottom="10sp"/>
+				<EditText android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_marginLeft="20sp"
+				    android:layout_marginRight="20sp"/>
 				
 			</LinearLayout>
 			
