@@ -7,6 +7,7 @@
     <string name="connection_automatic">Connection automatic</string>
     <string name="connection_informations">Connection informations</string>
     <string name="contacts">Contacts</string>
+    <string name="cancel">Cancel</string>
     <string name="date">Date</string>
     <string name="description">Description</string>
     <string name="email">Email</string>
@@ -30,6 +31,9 @@
     <string name="sign_up">Sign up</string>
     <string name="waiting_events">Waiting events</string>
     <string name="submit">Save</string>
+    <string name="vote">Vote</string>
+    <string name="vote_moins">Don\'t vote for</string>
+    <string name="vote_plus">Vote for</string>
     <string name="your_email">Your email</string>
 <string name="progress_load_friends">Loading friends from server</string>
 <string name="server_connexion">Connecting to the server</string>
