@@ -18,6 +18,7 @@
     <string name="my_options">Mes options</string>
     <string name="name">Nom</string>
     <string name="next">Suivant</string>
+    <string name="new_password">Nouveau mot de passe</string>
     <string name="not_yet_registered">Pas encore inscrit ?</string>
     <string name="no_event_available">Pas d\'évènement disponible</string>
     <string name="password">Mot de passe</string>
