@@ -15,9 +15,11 @@
     <string name="no_event_available">Pas d\'évènement disponible</string>
     <string name="password">Mot de passe</string>
     <string name="personal_informations">Informations personnelles</string>
+    <string name="profil">Profil</string>
     <string name="registration">Inscription</string>
     <string name="repeat_password">Répétez mot de passe</string>
     <string name="sign_up">Inscrivez-vous</string>
     <string name="waiting_events">Evènements en attente</string>
+    <string name="submit">Enregistrer</string>
     <string name="your_email">Votre email</string>
 </resources>

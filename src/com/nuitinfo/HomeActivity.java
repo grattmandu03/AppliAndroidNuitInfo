@@ -1,6 +1,7 @@
 package com.nuitinfo;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -40,7 +41,9 @@ public class HomeActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				Toast.makeText(HomeActivity.this, "Not yet Implemented", 3000).show();
+				Intent intent = new Intent(HomeActivity.this,
+						ProfilActivity.class);
+				startActivity(intent);
 			}
 		});
         

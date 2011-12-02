@@ -23,9 +23,13 @@ public final class R {
     }
     public static final class id {
         public static final int add_friend_button=0x7f06000c;
+        public static final int button_submit=0x7f060019;
         public static final int connectionAuto=0x7f060000;
         public static final int connection_button=0x7f060001;
         public static final int create_event_button=0x7f060003;
+        public static final int editText_confirmpassword=0x7f060017;
+        public static final int editText_email=0x7f060018;
+        public static final int editText_password=0x7f060016;
         public static final int event_button=0x7f060010;
         public static final int event_list_item_date=0x7f060008;
         public static final int event_list_item_layout=0x7f060006;
@@ -41,7 +45,9 @@ public final class R {
         public static final int param_button=0x7f060012;
         public static final int profil_button=0x7f060013;
         public static final int registration_button=0x7f060002;
-        public static final int sign_up_button=0x7f060014;
+        public static final int sign_up_button=0x7f06001a;
+        public static final int textView_birth=0x7f060015;
+        public static final int textView_name=0x7f060014;
         public static final int waiting_list_item_client=0x7f060009;
     }
     public static final class layout {
@@ -51,7 +57,8 @@ public final class R {
         public static final int event_list_separator=0x7f030003;
         public static final int friend_activity=0x7f030004;
         public static final int home_activity=0x7f030005;
-        public static final int registration_activity=0x7f030006;
+        public static final int profil_activity=0x7f030006;
+        public static final int registration_activity=0x7f030007;
     }
     public static final class string {
         public static final int add_event=0x7f050001;
@@ -69,10 +76,12 @@ public final class R {
         public static final int not_yet_registered=0x7f05000b;
         public static final int password=0x7f05000d;
         public static final int personal_informations=0x7f05000e;
-        public static final int registration=0x7f05000f;
-        public static final int repeat_password=0x7f050010;
-        public static final int sign_up=0x7f050011;
-        public static final int waiting_events=0x7f050012;
-        public static final int your_email=0x7f050013;
+        public static final int profil=0x7f05000f;
+        public static final int registration=0x7f050010;
+        public static final int repeat_password=0x7f050011;
+        public static final int sign_up=0x7f050012;
+        public static final int submit=0x7f050014;
+        public static final int waiting_events=0x7f050013;
+        public static final int your_email=0x7f050015;
     }
 }
