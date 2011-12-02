@@ -93,12 +93,12 @@ public class ListEventsAdapter extends BaseAdapter{
 					.findViewById(R.id.event_list_item_nb_user);
 			text_view_date = (TextView) convertView.findViewById(R.id.event_list_item_date);
 			text_view_title.setText(eventsList.get(position).getVictimName());
-
+			text_view_nbUsers.setText("3"); // TODO
 			// Affichage du pictogramme permettant de savoir si la livraison
 			// s'effectue le matin ou l'apres-midi
-			DateFormat hourFormat = DateFormat
-					.getTimeInstance(DateFormat.SHORT);
-			String hourString = hourFormat.format(
+			DateFormat dateFormat = DateFormat
+					.getDateInstance(DateFormat.SHORT);
+			String hourString = dateFormat.format(
 							eventsList.get(position).getDueDate());
 			text_view_date.setText(hourString);
 			

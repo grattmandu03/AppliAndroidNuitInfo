@@ -29,10 +29,9 @@ public class ListEventsActivity extends Activity{
 		ListView listView_events = (ListView) findViewById(R.id.listView_events);
 		TextView textview_no_event = (TextView) findViewById(R.id.event_list_no_event);
 		
+		this.createListEvent();
 		adapter = new ListEventsAdapter(this, listEvents);
 		listView_events.setAdapter(adapter);
-		
-		this.createListEvent();
 
 		if (listEvents.isEmpty()) {
 			listView_events.setVisibility(View.GONE);
