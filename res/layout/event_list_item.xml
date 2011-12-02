@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/event_list_item_layout"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:padding="5sp">
+	<TextView 	android:id="@+id/event_list_item_title" 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textStyle="bold"
+		android:textSize="20sp"
+		android:textColor="#000" />
+	<TextView 	android:id="@+id/event_list_item_date" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/waiting_list_item_client"
+		android:textColor="#494949"
+        android:paddingRight="30sp" />
+	<TextView android:id="@+id/event_list_item_nb_user"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentRight="true"
+		android:layout_centerVertical="true"
+		android:textColor="#ffffff"
+		android:textStyle="bold"
+		android:textSize="11sp"
+		android:gravity="center_horizontal|bottom"/>
+</RelativeLayout>
