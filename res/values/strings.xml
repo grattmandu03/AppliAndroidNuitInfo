@@ -25,4 +25,5 @@
 <string name="progress_load_friends">Loading friends from server</string>
 <string name="server_connexion">Connecting to the server</string>
 <string name="error_server">An error has occured... Please retry</string>
+<string name="connexion_nok">Invalid credentials</string>
 </resources>

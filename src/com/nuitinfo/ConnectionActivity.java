@@ -3,8 +3,6 @@ package com.nuitinfo;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.URI;
-import java.net.URISyntaxException;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -130,33 +128,28 @@ public class ConnectionActivity extends Activity {
 						if (!jsonObject.has("error")) { // OK
 							showProgressDialog(null); // Supprimer la boite de dialogue
 							
-							// Sauvegarde de l'ID de l'utilisateur
-					        globalPref.edit().putString("user_id", String.valueOf(jsonObject.getInt("id"))).commit();
-					        
-					        // Lancement du dashboard
-							startActivity(new Intent(getApplicationContext(), HomeActivity.class));
-						
-							((Activity)ConnectionActivity.this).finish();
+							if (jsonObject.getInt("id")!= -1) {
+								// Sauvegarde de l'ID de l'utilisateur
+						        globalPref.edit().putString("user_id", String.valueOf(jsonObject.getInt("id"))).commit();
+						        
+						        // Lancement du dashboard
+								startActivity(new Intent(getApplicationContext(), HomeActivity.class));
 							
+								((Activity)ConnectionActivity.this).finish();
+							
+							} else {
+								showProgressDialog(getResources().getString(R.string.connexion_nok).toString());
+							}
 		
 						} else {
 							showProgressDialog(jsonObject.getString("error"));
 						}
 					}
 					
-				} catch (IllegalStateException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-					showProgressDialog(null); // Supprimer la boite de dialogue
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					showProgressDialog(null); // Supprimer la boite de dialogue
-					e.printStackTrace();
-				} catch (JSONException e) {
-					// TODO Auto-generated catch block
-					showProgressDialog(null); // Supprimer la boite de dialogue
-					e.printStackTrace();
-				}  finally {
+				} catch (Exception e) {
+					showProgressDialog(getResources().getString(R.string.error_server).toString());
+					
+				} finally {
 					if (br != null){
 						try { br.close(); } // On ferme le flux de lecture de la réponse
 						catch (IOException e) {}
