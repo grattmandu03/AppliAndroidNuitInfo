@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/layout_root"
+              android:orientation="horizontal"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:padding="10dp"
+              >
+    <EditText android:id="@+id/email_to_invite"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginRight="10dp"
+               />
+    
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:padding="10dp" >
+                   
+	    <Button android:id="@+id/send_request_btn"
+	    	android:text="Send request"
+	    />
+	    
+	    <Button android:id="@+id/cancel_btn"
+	    	android:text="Cancel"
+	    />
+	</LinearLayout>
+</LinearLayout>

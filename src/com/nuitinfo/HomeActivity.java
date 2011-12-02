@@ -30,7 +30,9 @@ public class HomeActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				Toast.makeText(HomeActivity.this, "Not yet implemented", 3000).show();
+				Intent intent = new Intent(HomeActivity.this,
+						FriendActivity.class);
+				startActivity(intent);
 			}
 		});
         
