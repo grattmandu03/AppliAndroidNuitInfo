@@ -3,7 +3,8 @@
 	<string name="add_friend">Add People</string>
 	<string name="add_contact">Add a contact</string>
 	<string name="add_event">Create event</string>
-	<string name="app_name">Application Name</string>	
+	<string name="app_name">Application Name</string>
+	<string name="cancel">Cancel</string>	
 	<string name="connection">Connection</string>
 	<string name="connection_automatic">Connection automatic</string>
 	<string name="connection_informations">Connection informations</string>
@@ -35,6 +36,9 @@
 	<string name="sign_up">Sign up</string>
 	<string name="waiting_events">Waiting events</string>
 	<string name="submit">Save</string>
+	<string name="vote">Vote</string>
+	<string name="vote_moins">Don\'t vote for</string>
+	<string name="vote_plus">Vote for</string>
 	<string name="your_email">Your email</string>
 	<string name="progress_load_friends">Loading friends from server</string>
 	<string name="server_connexion">Connecting to the server</string>
