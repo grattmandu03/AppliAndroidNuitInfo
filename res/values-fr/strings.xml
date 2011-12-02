@@ -12,8 +12,10 @@
     <string name="not_yet_registered">Pas encore inscrit ?</string>
     <string name="password">Mot de passe</string>
     <string name="personal_informations">Informations personnelles</string>
+    <string name="profil">Profil</string>
     <string name="registration">Inscription</string>
     <string name="repeat_password">Répétez mot de passe</string>
     <string name="sign_up">Inscrivez-vous</string>
+    <string name="submit">Enregistrer</string>
     <string name="your_email">Votre email</string>
 </resources>

@@ -12,8 +12,10 @@
     <string name="not_yet_registered">Not yet registered ?</string>
     <string name="password">Password</string>
     <string name="personal_informations">Personal informations</string>
+    <string name="profil">Profil</string>
     <string name="registration">Registration</string>
     <string name="repeat_password">Repeat password</string>
     <string name="sign_up">Sign up</string>
+    <string name="submit">Save</string>
     <string name="your_email">Your email</string>
 </resources>
