@@ -3,6 +3,7 @@
 	<string name="add_friend">Ajouter une personne</string>
 	<string name="add_event">Créer un évènement</string>
     <string name="app_name">Nuit De L\'info</string>
+    <string name="cancel">Annuler</string>
     <string name="connection">Connexion</string>
     <string name="connection_automatic">Connexion automatique</string>
     <string name="connection_informations">Informations de connexion</string>
@@ -18,6 +19,7 @@
     <string name="my_options">Mes options</string>
     <string name="name">Nom</string>
     <string name="next">Suivant</string>
+    <string name="new_password">Nouveau mot de passe</string>
     <string name="not_yet_registered">Pas encore inscrit ?</string>
     <string name="no_event_available">Pas d\'évènement disponible</string>
     <string name="password">Mot de passe</string>
@@ -29,5 +31,8 @@
     <string name="sign_up">Inscrivez-vous</string>
     <string name="waiting_events">Evènements en attente</string>
     <string name="submit">Enregistrer</string>
+    <string name="vote">Voter</string>
+    <string name="vote_moins">Vote moins</string>
+    <string name="vote_plus">Voter plus</string>
     <string name="your_email">Votre email</string>
 </resources>
