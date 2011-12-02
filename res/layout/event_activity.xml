@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" android:layout_height="match_parent"
+	android:background="#FFFFFF" android:orientation="vertical">
+
+	<TextView android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_gravity="center"
+		android:text="@string/event" android:textSize="24sp"
+		android:layout_marginBottom="20sp" android:textColor="@color/main_green"
+		android:textStyle="bold" />
+
+	<TextView android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_gravity="center"
+		android:layout_marginBottom="5sp" android:text="@string/recipient"
+		android:textSize="18sp" android:textColor="#000" />
+
+	<EditText android:layout_width="match_parent"
+		android:layout_height="wrap_content" android:layout_gravity="center"
+		android:layout_marginBottom="5sp" android:singleLine="true"
+		android:layout_marginLeft="30sp" android:layout_marginRight="30sp"
+		android:hint="@string/name" />
+
+	<TextView android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_gravity="center"
+		android:layout_marginBottom="5sp" android:text="@string/date"
+		android:textSize="18sp" android:textColor="#000" />
+
+	<EditText android:layout_width="match_parent"
+		android:layout_height="wrap_content" android:layout_gravity="center"
+		android:layout_marginBottom="10sp" android:singleLine="true"
+		android:layout_marginLeft="30sp" android:layout_marginRight="30sp"
+		android:hint="@string/date" />
+
+	<TextView android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_gravity="center"
+		android:layout_marginBottom="10sp" android:text="@string/description"
+		android:textSize="18sp" android:textColor="#000" />
+
+	<EditText android:layout_width="match_parent"
+		android:layout_height="wrap_content" android:layout_gravity="center"
+		android:layout_marginBottom="10sp" android:layout_marginLeft="30sp"
+		android:layout_marginRight="30sp" android:singleLine="false"/>
+
+	<Button android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:id="@+id/button_next"
+		android:text="@string/next" android:layout_gravity="right"
+		android:layout_margin="5dip" android:textSize="10sp"
+		android:textStyle="bold" android:textColor="@color/main_green">
+	</Button>
+
+</LinearLayout>
