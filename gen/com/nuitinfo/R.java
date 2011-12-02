@@ -29,36 +29,40 @@ public final class R {
     public static final class id {
         public static final int add_friend_button=0x7f060011;
         public static final int button_next=0x7f060003;
-        public static final int button_submit=0x7f06001e;
+        public static final int button_submit=0x7f060022;
         public static final int connectionAuto=0x7f060000;
         public static final int connection_button=0x7f060001;
         public static final int create_event_button=0x7f060004;
-        public static final int editText_confirmpassword=0x7f06001c;
-        public static final int editText_email=0x7f06001d;
-        public static final int editText_password=0x7f06001b;
-        public static final int event_button=0x7f060015;
+        public static final int editText_confirmpassword=0x7f060020;
+        public static final int editText_email=0x7f060021;
+        public static final int editText_password=0x7f06001f;
+        public static final int event_button=0x7f060019;
         public static final int event_list_item_date=0x7f060009;
         public static final int event_list_item_layout=0x7f060007;
         public static final int event_list_item_nb_user=0x7f06000a;
         public static final int event_list_item_title=0x7f060008;
         public static final int event_list_no_event=0x7f060006;
         public static final int event_list_separator=0x7f06000b;
-        public static final int friend_button=0x7f060016;
-        public static final int layout_bot=0x7f060014;
-        public static final int layout_top=0x7f060013;
+        public static final int friend_button=0x7f06001a;
+        public static final int gift_list_item_layout=0x7f060013;
+        public static final int gift_list_item_price=0x7f060015;
+        public static final int gift_list_item_title=0x7f060014;
+        public static final int gift_list_item_vote=0x7f060016;
+        public static final int layout_bot=0x7f060018;
+        public static final int layout_top=0x7f060017;
         public static final int listView_contacts=0x7f06000f;
         public static final int listView_events=0x7f060005;
         public static final int listView_gifts=0x7f06000d;
         public static final int listView_people=0x7f060012;
-        public static final int param_button=0x7f060017;
-        public static final int profil_button=0x7f060018;
+        public static final int param_button=0x7f06001b;
+        public static final int profil_button=0x7f06001c;
         public static final int registration_button=0x7f060002;
-        public static final int sign_up_button=0x7f06001f;
+        public static final int sign_up_button=0x7f060023;
         public static final int tab_contacts=0x7f06000e;
         public static final int tab_gifts=0x7f06000c;
         public static final int tab_options=0x7f060010;
-        public static final int textView_birth=0x7f06001a;
-        public static final int textView_name=0x7f060019;
+        public static final int textView_birth=0x7f06001e;
+        public static final int textView_name=0x7f06001d;
     }
     public static final class layout {
         public static final int connection_activity=0x7f030000;
@@ -68,14 +72,16 @@ public final class R {
         public static final int event_list_separator=0x7f030004;
         public static final int event_tabs=0x7f030005;
         public static final int friend_activity=0x7f030006;
-        public static final int home_activity=0x7f030007;
-        public static final int profil_activity=0x7f030008;
-        public static final int registration_activity=0x7f030009;
+        public static final int gifts_list_item=0x7f030007;
+        public static final int home_activity=0x7f030008;
+        public static final int profil_activity=0x7f030009;
+        public static final int registration_activity=0x7f03000a;
     }
     public static final class string {
         public static final int add_event=0x7f050001;
         public static final int add_friend=0x7f050000;
         public static final int app_name=0x7f050002;
+        public static final int cancel=0x7f05001e;
         public static final int connection=0x7f050003;
         public static final int connection_automatic=0x7f050004;
         public static final int connection_informations=0x7f050005;
@@ -101,6 +107,9 @@ public final class R {
         public static final int repeat_password=0x7f050019;
         public static final int sign_up=0x7f05001a;
         public static final int submit=0x7f05001c;
+        public static final int vote=0x7f05001f;
+        public static final int vote_moins=0x7f050020;
+        public static final int vote_plus=0x7f050021;
         public static final int waiting_events=0x7f05001b;
         public static final int your_email=0x7f05001d;
     }

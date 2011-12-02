@@ -15,10 +15,8 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.nuitinfo.object.Event;
-import com.nuitinfo.object.User;
 
 public class ListEventsActivity extends Activity{
 
