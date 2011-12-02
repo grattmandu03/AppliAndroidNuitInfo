@@ -105,8 +105,6 @@ public class ConnectionActivity extends Activity {
 					HttpClient httpClient = new DefaultHttpClient(httpParameters);
 					HttpGet httpGet = new HttpGet(HomeActivity.WS_URL + "getuserbyemailpassword/" + username.getText().toString() + "/" + password.getText().toString());
 					
-					//System.out.println(HomeActivity.WS_URL + "getuserbyemailpassword/" + username.getText().toString() + "/" + password.getText().toString());
-					
 					// Execution de la requete (appel serveur)
 					HttpResponse httpResponse = httpClient.execute(httpGet);
 					

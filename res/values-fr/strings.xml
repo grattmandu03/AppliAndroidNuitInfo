@@ -4,6 +4,7 @@
 	<string name="add_contact">Ajouter un contact</string>
 	<string name="add_event">Créer un évènement</string>
     <string name="app_name">Nuit De L\'info</string>
+    <string name="cancel">Annuler</string>
     <string name="connection">Connexion</string>
     <string name="connection_automatic">Connexion automatique</string>
     <string name="connection_informations">Informations de connexion</string>
@@ -35,5 +36,8 @@
     <string name="sign_up">Inscrivez-vous</string>
     <string name="waiting_events">Evènements en attente</string>
     <string name="submit">Enregistrer</string>
+    <string name="vote">Voter</string>
+    <string name="vote_moins">Vote moins</string>
+    <string name="vote_plus">Voter plus</string>
     <string name="your_email">Votre email</string>
 </resources>
