@@ -18,6 +18,7 @@
     <string name="my_options">My options</string>
     <string name="name">Name</string>
     <string name="next">Next</string>
+    <string name="new_password">New password</string>
     <string name="not_yet_registered">Not yet registered ?</string>
     <string name="no_event_available">No event available</string>
     <string name="password">Password</string>
@@ -30,4 +31,8 @@
     <string name="waiting_events">Waiting events</string>
     <string name="submit">Save</string>
     <string name="your_email">Your email</string>
+<string name="progress_load_friends">Loading friends from server</string>
+<string name="server_connexion">Connecting to the server</string>
+<string name="error_server">An error has occured... Please retry</string>
+<string name="connexion_nok">Invalid credentials</string>
 </resources>

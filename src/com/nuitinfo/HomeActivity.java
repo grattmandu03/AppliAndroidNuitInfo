@@ -9,6 +9,11 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class HomeActivity extends Activity {
+	
+	public static int URL_TIMEOUT = 10000;
+	public static String WS_URL = "http://ogc-json-ws.herokuapp.com/jsonrenderer/";
+	public static String PREF_FILENAME = "main";
+	
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
