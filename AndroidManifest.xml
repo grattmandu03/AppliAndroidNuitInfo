@@ -21,6 +21,8 @@
 		</activity>
 		<activity android:name=".ProfilActivity">
 		</activity>
+		<activity android:name=".ListEventsActivity"></activity>
+		<activity android:name=".CreateEventActivity"></activity>
 	</application>
 
 </manifest>

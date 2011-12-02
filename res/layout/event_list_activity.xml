@@ -3,7 +3,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-
     
+    <Button android:id="@+id/create_event_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5sp"
+        android:text="@string/add_event"
+        android:textSize="20sp"/>
+    <ListView android:id="@+id/listView_events"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+    <TextView android:id="@+id/event_list_no_event" 
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:padding="10sp"
+		android:text="@string/no_event_available"
+		android:textSize="24sp"
+		android:gravity="center"
+		android:visibility="gone"/>
 
 </LinearLayout>

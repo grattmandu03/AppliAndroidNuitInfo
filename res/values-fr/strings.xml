@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="add_friend">Ajouter une personne</string>
+	<string name="add_event">Créer un évènement</string>
     <string name="app_name">Nuit De L\'info</string>
     <string name="connection">Connexion</string>
     <string name="connection_automatic">Connexion automatique</string>
@@ -11,9 +12,11 @@
     <string name="event">Evénement</string>
     <string name="first_name">Prénom</string>
     <string name="identification">Identification</string>
+    <string name="my_events">Mes évènements</string>
     <string name="name">Nom</string>
     <string name="next">Suivant</string>
     <string name="not_yet_registered">Pas encore inscrit ?</string>
+    <string name="no_event_available">Pas d\'évènement disponible</string>
     <string name="password">Mot de passe</string>
     <string name="personal_informations">Informations personnelles</string>
     <string name="profil">Profil</string>
@@ -21,6 +24,7 @@
     <string name="registration">Inscription</string>
     <string name="repeat_password">Répétez mot de passe</string>
     <string name="sign_up">Inscrivez-vous</string>
+    <string name="waiting_events">Evènements en attente</string>
     <string name="submit">Enregistrer</string>
     <string name="your_email">Votre email</string>
 </resources>
