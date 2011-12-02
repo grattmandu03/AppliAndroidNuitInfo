@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="add_friend">Add People</string>
-    <string name="app_name">Application Name</string>
-    <string name="connection">Connection</string>
-    <string name="connection_automatic">Connection automatic</string>
-    <string name="connection_informations">Connection informations</string>
-    <string name="email">Email</string>
-    <string name="first_name">First name</string>
-    <string name="identification">Identification</string>
-    <string name="name">Name</string>
-    <string name="not_yet_registered">Not yet registered ?</string>
-    <string name="password">Password</string>
-    <string name="personal_informations">Personal informations</string>
-    <string name="profil">Profil</string>
-    <string name="registration">Registration</string>
-    <string name="repeat_password">Repeat password</string>
-    <string name="sign_up">Sign up</string>
-    <string name="submit">Save</string>
-    <string name="your_email">Your email</string>
+	<string name="add_friend">Add People</string>
+	<string name="app_name">Application Name</string>
+	<string name="connection">Connection</string>
+	<string name="connection_automatic">Connection automatic</string>
+	<string name="connection_informations">Connection informations</string>
+	<string name="date">Date</string>
+	<string name="description">Description</string>
+	<string name="email">Email</string>
+	<string name="event">Event</string>
+	<string name="first_name">First name</string>
+	<string name="identification">Identification</string>
+	<string name="name">Name</string>
+	<string name="next">Next</string>
+	<string name="not_yet_registered">Not yet registered ?</string>
+	<string name="password">Password</string>
+	<string name="personal_informations">Personal informations</string>
+	<string name="profil">Profil</string>
+	<string name="recipient">Recipient</string>
+	<string name="registration">Registration</string>
+	<string name="repeat_password">Repeat password</string>
+	<string name="sign_up">Sign up</string>
+	<string name="submit">Save</string>
+	<string name="your_email">Your email</string>
 </resources>
