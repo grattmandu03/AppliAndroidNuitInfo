@@ -18,4 +18,7 @@
     <string name="sign_up">Sign up</string>
     <string name="submit">Save</string>
     <string name="your_email">Your email</string>
+<string name="progress_load_friends">Loading friends from server</string>
+<string name="server_connexion">Connecting to the server</string>
+<string name="error_server">An error has occured... Please retry</string>
 </resources>

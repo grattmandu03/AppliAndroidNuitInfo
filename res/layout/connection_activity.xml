@@ -21,14 +21,18 @@
   	android:text="@string/identification"
   	android:textSize="18sp"
   	android:textColor="#000"/>
-  <EditText android:layout_width="match_parent"
+  <EditText
+  	android:id="@+id/connexion_email"
+  	android:layout_width="match_parent"
   	android:layout_height="wrap_content"
   	android:layout_marginLeft="20sp"
   	android:layout_marginRight="20sp"
   	android:layout_marginBottom="5sp"
   	android:singleLine="true"
   	android:hint="@string/email"/>
-  <EditText android:layout_width="match_parent"
+  <EditText 
+  	android:id="@+id/connexion_pwd"
+  	android:layout_width="match_parent"
   	android:layout_height="wrap_content"
   	android:layout_marginLeft="20sp"
   	android:layout_marginRight="20sp"
