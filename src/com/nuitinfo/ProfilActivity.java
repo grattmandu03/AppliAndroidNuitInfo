@@ -3,33 +3,24 @@ package com.nuitinfo;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.text.DateFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
-import org.apache.http.protocol.HTTP;
-import org.json.JSONArray;
 import org.json.JSONObject;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
-import com.nuitinfo.object.User;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -41,6 +32,16 @@ public class ProfilActivity extends Activity{
 	
 	protected ProgressDialog progressDialog; // Pour informer l'utilisateur d'un traitement en cours
 	protected String progressDialogText = "";
+	private static SharedPreferences globalPref;
+	
+	private EditText editText_password;
+	private EditText editText_confirmpassword;
+	private EditText editText_email;
+	private TextView textView_birth;
+	private TextView textView_name;
+	
+	private SimpleDateFormat dateFormatOut;
+	
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -48,48 +49,44 @@ public class ProfilActivity extends Activity{
 		setContentView(R.layout.profil_activity);
 
 		Button button_submit = (Button) findViewById(R.id.button_submit);
-		EditText editText_password = (EditText)findViewById(R.id.editText_password);
-		EditText editText_confirmpassword = (EditText)findViewById(R.id.editText_confirmpassword);
-		EditText editText_email = (EditText)findViewById(R.id.editText_email);
-		TextView textView_birth = (TextView)findViewById(R.id.textView_birth);
-		TextView textView_name = (TextView)findViewById(R.id.textView_name);
+		editText_password = (EditText)findViewById(R.id.editText_password);
+		editText_confirmpassword = (EditText)findViewById(R.id.editText_confirmpassword);
+		editText_email = (EditText)findViewById(R.id.editText_email);
+		textView_birth = (TextView)findViewById(R.id.textView_birth);
+		textView_name = (TextView)findViewById(R.id.textView_name);
 
 		createProgressDialog();
 		
-		SimpleDateFormat format = new SimpleDateFormat("yyyy/MM/dd");
-		long date_value = 0;
-		try {
-			date_value = format.parse("1989/05/04").getTime();
-		} catch (ParseException e) {
-			e.printStackTrace();
-		}
-
-		User user1 = new User(0,"monadresse@gmail.com","mdp","FIFRE","Sebastien",new Date(date_value));
-		DateFormat date_format = DateFormat.getDateInstance(DateFormat.SHORT);
-		String date = date_format.format(user1.getBirthDate());
-
-		textView_name.setText(user1.getFirstname() + " " + user1.getLastname());
-		textView_birth.setText(date);
-		editText_email.setText(user1.getEmail());
+		globalPref = getSharedPreferences(HomeActivity.PREF_FILENAME, MODE_PRIVATE);
+		
+    	dateFormatOut = new SimpleDateFormat("dd/MM/yy 'at' HH:mm");
+		
+		loadFromServer();
 
 		button_submit.setOnClickListener(new OnClickListener() {
-
 			@Override
 			public void onClick(View v) {
 				Toast.makeText(ProfilActivity.this, "Not yet Implemented", 3000).show();
-
-
 			}
 		});
 	}
 	
+	
+	public void setValues(final String fullName, final String birthdate, final String email) {
+		runOnUiThread(new Runnable() {
+            public void run() {	
+	            textView_name.setText(fullName);
+	            editText_email.setText(email);
+            }
+		});
+	}
 	
 	private void loadFromServer() {
 		// Lancement de l'appel réseau dans un thread
 		new Thread(new Runnable() {
 
 			public void run() {
-				/*BufferedReader br = null;
+				BufferedReader br = null;
 				StringBuilder builder = new StringBuilder();
 				
         		try {
@@ -98,25 +95,17 @@ public class ProfilActivity extends Activity{
         			// Affichage boite de dialogue de progression
         			showProgressDialog("");
         			
-        			// Appel d'une URL distante en POST
-        			HttpParams httpParameters = new BasicHttpParams();
-        			HttpConnectionParams.setConnectionTimeout(httpParameters, HomeActivity.URL_TIMEOUT);
-        			HttpConnectionParams.setSoTimeout(httpParameters, HomeActivity.URL_TIMEOUT);
-        			
-        			HttpClient httpClient = new DefaultHttpClient(httpParameters);
-        			HttpPost httpPost = new HttpPost(HomeActivity.WS_URL + "getuserbyid/");
-        		
-        			// On créé la liste des paramètres à transmettre
-        			List<NameValuePair> parameters = new ArrayList<NameValuePair>();
-        			parameters.add(new BasicNameValuePair("action", "listEvents"));
-        			parameters.add(new BasicNameValuePair("sessId", globalPref.getString("AUTH_SESSID", "")));
-        			
-        			// On encode les paramètres en UTF-8
-        			UrlEncodedFormEntity formEntity = new UrlEncodedFormEntity(parameters, HTTP.UTF_8);
-        			httpPost.setEntity(formEntity);
-        			
-        			// Execution de la requete (appel serveur)
-					HttpResponse httpResponse = httpClient.execute(httpPost);
+        			// Appel d'une URL distante en GET
+					HttpParams httpParameters = new BasicHttpParams();
+					HttpConnectionParams.setConnectionTimeout(httpParameters, HomeActivity.URL_TIMEOUT);
+					HttpConnectionParams.setSoTimeout(httpParameters, HomeActivity.URL_TIMEOUT);
+					
+					HttpClient httpClient = new DefaultHttpClient(httpParameters);
+					HttpGet httpGet = new HttpGet(HomeActivity.WS_URL + "getuserbyid/" + globalPref.getString("user_id", "-1"));
+					
+					
+					// Execution de la requete (appel serveur)
+					HttpResponse httpResponse = httpClient.execute(httpGet);
 					
 					HttpEntity res = httpResponse.getEntity();
 					
@@ -132,75 +121,32 @@ public class ProfilActivity extends Activity{
 						
 						// On parse le résultat JSON
 						JSONObject jsonObject = new JSONObject(builder.toString());
-						int errorStatus = jsonObject.getInt("error");
 						
-						if (errorStatus == 0) { // OK
+						if (!jsonObject.has("error")) { // OK
 							showProgressDialog(null); // Supprimer la boite de dialogue
 							
-							resetList(); // Réinitialiser les données de la liste
 							
-							// Generation de la liste de contacts
-							JSONArray ownEvents = jsonObject.getJSONArray("own_events");
-							JSONArray invitedEvents = jsonObject.getJSONArray("invited_events");
+							Date d = new Date(Long.parseLong(jsonObject.getString("birthdate")));
 							
-							// Events de l'utilisateur
-							if (ownEvents != null) {
-								int nbOwn = ownEvents.length();
-								if (nbOwn > 0) addListSeparator("YOUR EVENTS");
-								
-								for (int i=0; i<nbOwn; i++) {
-    								JSONObject event = ownEvents.getJSONObject(i);
-    								
-    								if (event != null) { // Event extrait correctement
-    									addListItem(new Event(event.getInt("event_id"),
-    														  event.getInt("owner_id"),
-    														  "-1",
-    														  event.getString("title"),
-    														  event.getString("description"),
-    														  event.getString("date"),
-    														  event.getInt("guests")
-    														  ));
-    								}
-    							}
-							}
+							setValues(jsonObject.getString("firstname")+ " " + jsonObject.getString("lastname"),
+									  d.getMonth()+"/"+d.getDay()+"/"+d.getYear(),
+									  jsonObject.getString("email"));
 							
-							// Events auxquels l'utilisateur est invité
-							if (invitedEvents != null) {
-								int nbInvited = invitedEvents.length();
-								if (nbInvited > 0) addListSeparator("INVITED TO JOIN");
-								
-								for (int i=0; i<nbInvited; i++) {
-									JSONObject event = invitedEvents.getJSONObject(i);
-    								
-    								if (event != null) { // Event extrait correctement
-    									addListItem(new Event(event.getInt("event_id"),
-    														  event.getInt("owner_id"),
-    														  event.getString("owner_name"),
-    														  event.getString("title"),
-    														  event.getString("description"),
-    														  event.getString("date"),
-    														  event.getInt("guests")
-    														  ));
-    								}
-    							}
-							}
-							
-							notifyRefresh(); // Mettre à jour la liste
-
 						} else {
-							showProgressDialog(jsonObject.getString("message"));
+							showProgressDialog(jsonObject.getString("error"));
 						}
 					}
 					
 				} catch (Exception e) {
-					showProgressDialog(getResources().getText(R.string.error_server).toString()+e.getMessage());
+					showProgressDialog(getResources().getString(R.string.error_server).toString()+e.getMessage());
+					e.printStackTrace();
 					
 				} finally {
 					if (br != null){
 						try { br.close(); } // On ferme le flux de lecture de la réponse
 						catch (IOException e) {}
 					}
-				}*/
+				}
 			}
 		}).start();
 	}

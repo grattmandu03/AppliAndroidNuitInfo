@@ -22,11 +22,12 @@ public final class R {
         public static final int contact=0x7f020005;
         public static final int event=0x7f020006;
         public static final int friend=0x7f020007;
-        public static final int ic_launcher=0x7f020008;
-        public static final int param=0x7f020009;
-        public static final int picto_guests=0x7f02000a;
-        public static final int preferences=0x7f02000b;
-        public static final int profil=0x7f02000c;
+        public static final int friends=0x7f020008;
+        public static final int ic_launcher=0x7f020009;
+        public static final int param=0x7f02000a;
+        public static final int picto_guests=0x7f02000b;
+        public static final int preferences=0x7f02000c;
+        public static final int profil=0x7f02000d;
     }
     public static final class id {
         public static final int add_friend_button=0x7f060013;
