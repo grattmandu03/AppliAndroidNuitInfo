@@ -32,6 +32,9 @@
 		<activity android:name=".EventActivity"
 		    android:screenOrientation="portrait">
 		</activity>
+
+		<activity android:name=".EventInvitationActivity" android:screenOrientation="portrait"></activity>
+
 		<activity android:name=".CreateEventActivity"
 		    android:screenOrientation="portrait"></activity>
 	</application>

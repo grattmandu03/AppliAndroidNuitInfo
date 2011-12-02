@@ -1,6 +1,7 @@
 package com.nuitinfo;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -21,7 +22,9 @@ public class CreateEventActivity extends Activity{
 			
 			@Override
 			public void onClick(View v) {
-				Toast.makeText(CreateEventActivity.this, "Not yet implemented", 3000).show();
+				Intent intent = new Intent(CreateEventActivity.this,
+						EventInvitationActivity.class);
+				startActivity(intent);
 			}
 		});
                 
