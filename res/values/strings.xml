@@ -6,10 +6,13 @@
     <string name="connection">Connection</string>
     <string name="connection_automatic">Connection automatic</string>
     <string name="connection_informations">Connection informations</string>
+    <string name="contacts">Contacts</string>
     <string name="email">Email</string>
     <string name="first_name">First name</string>
+    <string name="gifts">Gifts</string>
     <string name="identification">Identification</string>
     <string name="my_events">My events</string>
+    <string name="my_options">My options</string>
     <string name="name">Name</string>
     <string name="not_yet_registered">Not yet registered ?</string>
     <string name="no_event_available">No event available</string>

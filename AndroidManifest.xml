@@ -21,7 +21,10 @@
 		</activity>
 		<activity android:name=".ProfilActivity">
 		</activity>
-		<activity android:name=".ListEventsActivity"></activity>
+		<activity android:name=".ListEventsActivity">
+		</activity>
+		<activity android:name=".EventActivity">
+		</activity>
 	</application>
 
 </manifest>
