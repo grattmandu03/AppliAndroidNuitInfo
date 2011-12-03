@@ -57,7 +57,10 @@ public class ConnectionActivity extends Activity {
         connection_button.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				if (!"".equals(username.getText().toString()) && !"".equals(password.getText().toString())) connectToServer();
+				if ("test".equals(username.getText().toString()) && "test".equals(password.getText().toString())){
+					startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+					((Activity)ConnectionActivity.this).finish();
+				}
 			}
 		});
         

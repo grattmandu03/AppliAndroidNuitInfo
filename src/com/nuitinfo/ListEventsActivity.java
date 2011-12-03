@@ -64,17 +64,8 @@ public class ListEventsActivity extends Activity{
 					int position, long id) {
 
 				if (adapter != null) {
-					int separator_number = 0;
-					for (int i = 0; i < position; i++) {
-						if (adapter.getItemViewType(i) == 1) {
-							separator_number++;
-						}
-					}
-					//long delivery_id = adapter.getDeliveryListSort()
-					//		.get(position - separator_number).getDelivery_id();
-
-					//alert = initAlertDialog(delivery_id).create();
-					//alert.show();
+					Intent intent = new Intent(ListEventsActivity.this, EventActivity.class);
+					startActivity(intent);
 				}
 			}
 		});
